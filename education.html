@@ -3,250 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ประวัติการศึกษาของนักเรียน">
-    <title>My Portfolio | การศึกษา</title>
-
+    <title>การศึกษา - Student Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Navigation -->
-    <header class="site-header">
-        <nav class="navbar container">
-            <a href="index.html" class="logo">
-                <span class="logo-mark">M</span>
-                <span>My<span>Portfolio</span></span>
-            </a>
-
-            <div class="nav-links">
-                <a href="index.html">หน้าแรก</a>
-                <a href="profile.html">ประวัติส่วนตัว</a>
-                <a href="education.html" class="active">การศึกษา</a>
-                <a href="hobby.html">งานอดิเรก</a>
-                <a href="contact.html">ติดต่อ</a>
-            </div>
+    <header class="navbar-container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">My<span>Portfolio</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html" class="active">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-
-        <!-- Page Hero -->
-        <section class="page-hero education-hero">
-            <div class="container page-hero-content">
-                <span class="section-label">MY EDUCATION</span>
-                <h1>เส้นทางการศึกษา</h1>
-                <p>
-                    ทุกช่วงของการเรียนคืออีกหนึ่งก้าว
-                    ที่ทำให้ฉันเติบโตขึ้น
-                </p>
-            </div>
-        </section>
-
-        <!-- Timeline -->
-        <section class="section">
-            <div class="container">
-
-                <div class="section-heading centered">
-                    <span class="section-label">EDUCATION TIMELINE</span>
-                    <h2>เส้นทางการเรียนรู้ของฉัน</h2>
-                    <p>ตั้งแต่อดีตจนถึงปัจจุบัน</p>
-                </div>
-
-                <div class="timeline">
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <span>01</span>
-                        </div>
-
-                        <div class="timeline-content">
-                            <span class="timeline-year">ประถมศึกษา</span>
-                            <h3>[กรอกชื่อโรงเรียน]</h3>
-                            <p>
-                                เริ่มต้นการเรียนรู้พื้นฐาน
-                                และค้นพบความสนใจในหลาย ๆ ด้าน
-                            </p>
-
-                            <div class="timeline-tags">
-                                <span>พื้นฐาน</span>
-                                <span>การเรียนรู้</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <span>02</span>
-                        </div>
-
-                        <div class="timeline-content">
-                            <span class="timeline-year">มัธยมศึกษาตอนต้น</span>
-                            <h3>[กรอกชื่อโรงเรียน]</h3>
-                            <p>
-                                ได้เรียนรู้วิชาที่หลากหลาย
-                                และเริ่มค้นหาความสนใจของตัวเองอย่างจริงจัง
-                            </p>
-
-                            <div class="timeline-tags">
-                                <span>วิทยาศาสตร์</span>
-                                <span>เทคโนโลยี</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item current">
-                        <div class="timeline-marker">
-                            <span>03</span>
-                        </div>
-
-                        <div class="timeline-content">
-                            <span class="timeline-year">ปัจจุบัน</span>
-                            <h3>ม.3 / [กรอกห้อง]</h3>
-                            <p>
-                                กำลังพัฒนาทักษะและเตรียมตัว
-                                สำหรับการเรียนในระดับต่อไป
-                            </p>
-
-                            <div class="timeline-tags">
-                                <span class="current-tag">CURRENT</span>
-                                <span>Portfolio</span>
-                                <span>Computer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Education Table -->
-        <section class="section soft-section">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-label">EDUCATION RECORD</span>
-                    <h2>ข้อมูลการศึกษา</h2>
-                </div>
-
-                <div class="table-wrapper">
-
-                    <table class="education-table">
-
-                        <thead>
-                            <tr>
-                                <th>ระดับ</th>
-                                <th>สถานศึกษา</th>
-                                <th>ช่วงเวลา</th>
-                                <th>สถานะ</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>ประถมศึกษา</strong>
-                                </td>
-                                <td>[กรอกชื่อโรงเรียน]</td>
-                                <td>[กรอกปี]</td>
-                                <td>
-                                    <span class="status completed">
-                                        สำเร็จแล้ว
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <strong>มัธยมต้น</strong>
-                                </td>
-                                <td>[กรอกชื่อโรงเรียน]</td>
-                                <td>[กรอกปี]</td>
-                                <td>
-                                    <span class="status current-status">
-                                        กำลังศึกษา
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Study Highlights -->
-        <section class="section">
-            <div class="container">
-
-                <div class="study-highlight">
-
-                    <div class="study-main">
-                        <span class="section-label">STUDY HIGHLIGHTS</span>
-                        <h2>วิชาที่ฉันชอบ</h2>
-
-                        <p>
-                            วิชาที่ฉันสนใจเป็นพิเศษคือ
-                            <strong>[กรอกวิชาที่ชอบ]</strong>
-                            เพราะฉันชอบการเรียนรู้และการนำความรู้
-                            ไปทดลองใช้จริง
-                        </p>
-                    </div>
-
-                    <div class="subject-bubble">
-                        <span>📚</span>
-                        <strong>[กรอกวิชา]</strong>
-                    </div>
-
-                    <div class="subject-bubble bubble-small">
-                        <span>💻</span>
-                        <strong>Computer</strong>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-grid">
-
-            <div>
-                <a href="index.html" class="logo footer-logo">
-                    <span class="logo-mark">M</span>
-                    <span>My<span>Portfolio</span></span>
-                </a>
-
-                <p>เว็บไซต์ Portfolio สำหรับแนะนำตัวและรวบรวมผลงานของนักเรียน</p>
-            </div>
-
-            <div class="footer-nav">
-                <h4>Navigation</h4>
-                <a href="index.html">หน้าแรก</a>
-                <a href="profile.html">ประวัติส่วนตัว</a>
-                <a href="education.html">การศึกษา</a>
-                <a href="hobby.html">งานอดิเรก</a>
-                <a href="contact.html">ติดต่อ</a>
-            </div>
-
-            <div class="footer-student">
-                <h4>Student</h4>
-                <p>[กรอกชื่อ]</p>
-                <p>ม.3/[กรอกห้อง]</p>
-                <p>[กรอกจังหวัด]</p>
-            </div>
-
+    <main class="container page-padding">
+        <div class="section-title">
+            <h2>ประวัติการศึกษา</h2>
+            <p>เส้นทางการศึกษาตั้งแต่ระดับประถมศึกษาจนถึงปัจจุบัน</p>
         </div>
 
-        <div class="container footer-bottom">
-            <p>© 2026 [กรอกชื่อ] — Student Portfolio</p>
-            <p>Made with HTML & CSS 💙</p>
+        <section class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">ปัจจุบัน</span>
+                    <h3>มัธยมศึกษาตอนต้น (ม.3)</h3>
+                    <p class="school-name">[กรอกชื่อโรงเรียน]</p>
+                    <p>สายการเรียน/ห้องเรียน: ม.3/[กรอกห้อง] | วิชาที่ชื่นชอบ: [กรอกวิชาที่ชอบ]</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">ระดับชั้น ม.1 - ม.2</span>
+                    <h3>มัธยมศึกษาตอนต้น (ตอนต้น)</h3>
+                    <p class="school-name">[กรอกชื่อโรงเรียน]</p>
+                    <p>เข้าร่วมกิจกรรมวิชาการ กิจกรรมคอมพิวเตอร์ และการแข่งขันภายในโรงเรียน</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">ระดับประถมศึกษา</span>
+                    <h3>ประถมศึกษา (ป.1 - ป.6)</h3>
+                    <p class="school-name">[กรอกชื่อโรงเรียนประถม]</p>
+                    <p>สำเร็จการศึกษาระดับประถมศึกษาด้วยผลการเรียนที่ดี และมีส่วนร่วมในกิจกรรมโรงเรียน</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-table-section">
+            <h3>ตารางสรุปประวัติการศึกษา</h3>
+            <div class="table-responsive">
+                <table class="edu-table">
+                    <thead>
+                        <tr>
+                            <th>ระดับการศึกษา</th>
+                            <th>สถานศึกษา</th>
+                            <th>ปีการศึกษา</th>
+                            <th>สถานะ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ประถมศึกษา</td>
+                            <td>[กรอกชื่อโรงเรียนประถม]</td>
+                            <td>2017 - 2022</td>
+                            <td><span class="status-badge completed">สำเร็จการศึกษา</span></td>
+                        </tr>
+                        <tr>
+                            <td>มัธยมศึกษาตอนต้น</td>
+                            <td>[กรอกชื่อโรงเรียน]</td>
+                            <td>2023 - ปัจจุบัน</td>
+                            <td><span class="status-badge active">กำลังศึกษา</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>My<span>Portfolio</span></h3>
+                <p>[กรอกชื่อ] - นักเรียนชั้น ม.3/[กรอกห้อง]</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 [กรอกชื่อ]. All Rights Reserved.</p>
         </div>
     </footer>
 
