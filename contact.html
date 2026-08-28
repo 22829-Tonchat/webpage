@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>การศึกษา - Student Portfolio</title>
+    <title>ติดต่อ - Student Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,78 +17,46 @@
             <ul class="nav-links">
                 <li><a href="index.html">หน้าแรก</a></li>
                 <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-                <li><a href="education.html" class="active">การศึกษา</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
                 <li><a href="hobby.html">งานอดิเรก</a></li>
-                <li><a href="contact.html">ติดต่อ</a></li>
+                <li><a href="contact.html" class="active">ติดต่อ</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container page-padding">
         <div class="section-title">
-            <h2>ประวัติการศึกษา</h2>
-            <p>เส้นทางการศึกษาตั้งแต่ระดับประถมศึกษาจนถึงปัจจุบัน</p>
+            <h2>ช่องทางการติดต่อ</h2>
+            <p>สามารถติดต่อหรือติดตามผลงานของผมได้ผ่านช่องทางด้านล่างนี้</p>
         </div>
 
-        <section class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">ปัจจุบัน</span>
-                    <h3>มัธยมศึกษาตอนต้น (ม.3)</h3>
-                    <p class="school-name">[กรอกชื่อโรงเรียน]</p>
-                    <p>สายการเรียน/ห้องเรียน: ม.3/[กรอกห้อง] | วิชาที่ชื่นชอบ: [กรอกวิชาที่ชอบ]</p>
+        <section class="contact-wrapper">
+            <div class="grid-3">
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>อีเมล</h3>
+                    <p>student@example.com</p>
+                    <a href="mailto:student@example.com" class="btn-text">ส่งอีเมลหาผม →</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🏫</div>
+                    <h3>โรงเรียน</h3>
+                    <p>[กรอกชื่อโรงเรียน]</p>
+                    <p class="sub-text">จังหวัด[กรอกจังหวัด]</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🌐</div>
+                    <h3>โซเชียลมีเดีย</h3>
+                    <p>Facebook / Instagram</p>
+                    <p class="sub-text">@[กรอกชื่อนักเรียน]</p>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">ระดับชั้น ม.1 - ม.2</span>
-                    <h3>มัธยมศึกษาตอนต้น (ตอนต้น)</h3>
-                    <p class="school-name">[กรอกชื่อโรงเรียน]</p>
-                    <p>เข้าร่วมกิจกรรมวิชาการ กิจกรรมคอมพิวเตอร์ และการแข่งขันภายในโรงเรียน</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">ระดับประถมศึกษา</span>
-                    <h3>ประถมศึกษา (ป.1 - ป.6)</h3>
-                    <p class="school-name">[กรอกชื่อโรงเรียนประถม]</p>
-                    <p>สำเร็จการศึกษาระดับประถมศึกษาด้วยผลการเรียนที่ดี และมีส่วนร่วมในกิจกรรมโรงเรียน</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="education-table-section">
-            <h3>ตารางสรุปประวัติการศึกษา</h3>
-            <div class="table-responsive">
-                <table class="edu-table">
-                    <thead>
-                        <tr>
-                            <th>ระดับการศึกษา</th>
-                            <th>สถานศึกษา</th>
-                            <th>ปีการศึกษา</th>
-                            <th>สถานะ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ประถมศึกษา</td>
-                            <td>[กรอกชื่อโรงเรียนประถม]</td>
-                            <td>2017 - 2022</td>
-                            <td><span class="status-badge completed">สำเร็จการศึกษา</span></td>
-                        </tr>
-                        <tr>
-                            <td>มัธยมศึกษาตอนต้น</td>
-                            <td>[กรอกชื่อโรงเรียน]</td>
-                            <td>2023 - ปัจจุบัน</td>
-                            <td><span class="status-badge active">กำลังศึกษา</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="cta-banner">
+                <h3>ขอบคุณที่เข้าชมเว็บไซต์ของผม!</h3>
+                <p>หากมีคำแนะนำหรือข้อเสนอแนะเกี่ยวกับโครงงาน สามารถติดต่อได้เสมอครับ</p>
             </div>
         </section>
     </main>
