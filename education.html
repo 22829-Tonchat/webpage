@@ -10,55 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-document.addEventListener('DOMContentLoaded', () => {
-    // ฟังก์ชันสร้างหยดน้ำพ่น
-    const createWaterParticle = (e) => {
-        // จำกัดจำนวนตัวเจเนอเรตไม่ให้เครื่องกระตุก
-        const particleCount = 4; 
 
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('water-particle');
-            
-            // ตั้งค่าตำแหน่งเริ่มต้นที่หัวลูกศรเมาส์
-            particle.style.left = `${e.clientX}px`;
-            particle.style.top = `${e.clientY}px`;
-
-            // สุ่มขนาดหยดน้ำ
-            const size = Math.random() * 8 + 4; // ขนาด 4px - 12px
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-
-            // สุ่มทิศทางการพ่นกระเด็น (X, Y) และระยะทาง
-            const destinationX = (Math.random() - 0.5) * 80; 
-            const destinationY = (Math.random() - 0.5) * 80 - 20; // ให้แรงพ่นเฉียงขึ้นเล็กน้อย
-
-            particle.style.setProperty('--dx', `${destinationX}px`);
-            particle.style.setProperty('--dy', `${destinationY}px`);
-
-            // สุ่มระยะเวลาเล่น Animation
-            const duration = Math.random() * 0.4 + 0.4; // 0.4s - 0.8s
-            particle.style.animationDuration = `${duration}s`;
-
-            document.body.appendChild(particle);
-
-            // ลบ Element ออกเมื่อทำงานเสร็จเพื่อเคลียร์ Memory
-            setTimeout(() => {
-                particle.remove();
-            }, duration * 1000);
-        }
-    };
-
-    // ดักจับการเคลื่อนไหวของเมาส์ (Throttle เพื่อความลื่นไหล)
-    let isThrottled = false;
-    window.addEventListener('mousemove', (e) => {
-        if (!isThrottled) {
-            createWaterParticle(e);
-            isThrottled = true;
-            setTimeout(() => { isThrottled = false; }, 30); // สร้างทุกๆ 30ms
-        }
-    });
-});
     <header class="navbar-container">
         <nav class="navbar">
             <a href="index.html" class="logo">My<span>Portfolio</span></a>
@@ -84,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="timeline-content">
                     <span class="timeline-date">ปัจจุบัน</span>
                     <h3>มัธยมศึกษาตอนต้น (ม.3)</h3>
-                    <p class="school-name">[จอมทอง]</p>
-                    <p>สายการเรียน/ห้องเรียน: ม.3/[2] | วิชาที่ชื่นชอบ: [วิทยาศาสตร์]</p>
+                    <p class="school-name">โรงเรียนจอมทอง</p>
+                    <p>สายการเรียน/ห้องเรียน: ม.3/2 | วิชาที่ชื่นชอบ: วิทยาศาสตร์</p>
                 </div>
             </div>
 
@@ -94,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="timeline-content">
                     <span class="timeline-date">ระดับชั้น ม.1 - ม.2</span>
                     <h3>มัธยมศึกษาตอนต้น (ตอนต้น)</h3>
-                    <p class="school-name">[จอมทอง]</p>
+                    <p class="school-name">โรงเรียนจอมทอง</p>
                     <p>เข้าร่วมกิจกรรมวิชาการ กิจกรรมคอมพิวเตอร์ และการแข่งขันภายในโรงเรียน</p>
                 </div>
             </div>
@@ -104,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="timeline-content">
                     <span class="timeline-date">ระดับประถมศึกษา</span>
                     <h3>ประถมศึกษา (ป.1 - ป.6)</h3>
-                    <p class="school-name">[ศรีจอมทอง]</p>
+                    <p class="school-name">โรงเรียนศรีจอมทอง</p>
                     <p>สำเร็จการศึกษาระดับประถมศึกษาด้วยผลการเรียนที่ดี และมีส่วนร่วมในกิจกรรมโรงเรียน</p>
                 </div>
             </div>
@@ -125,13 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <tbody>
                         <tr>
                             <td>ประถมศึกษา</td>
-                            <td>[ศรีจอมทอง]</td>
+                            <td>โรงเรียนศรีจอมทอง</td>
                             <td>2017 - 2022</td>
                             <td><span class="status-badge completed">สำเร็จการศึกษา</span></td>
                         </tr>
                         <tr>
                             <td>มัธยมศึกษาตอนต้น</td>
-                            <td>[จอมทอง]</td>
+                            <td>โรงเรียนจอมทอง</td>
                             <td>2023 - ปัจจุบัน</td>
                             <td><span class="status-badge active">กำลังศึกษา</span></td>
                         </tr>
@@ -145,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="container footer-content">
             <div class="footer-info">
                 <h3>My<span>Portfolio</span></h3>
-                <p>[ต้นฉัตร] - นักเรียนชั้น ม.3/[2]</p>
+                <p>ต้นฉัตร - นักเรียนชั้น ม.3/2</p>
             </div>
             <ul class="footer-links">
                 <li><a href="index.html">หน้าแรก</a></li>
@@ -156,9 +108,54 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 [ต้นฉัตร]. All Rights Reserved.</p>
+            <p>&copy; 2026 ต้นฉัตร. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript สำหรับลูกเล่นพ่นน้ำเมื่อลากเมาส์ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const createWaterParticle = (e) => {
+                const particleCount = 4; 
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('water-particle');
+                    
+                    particle.style.left = `${e.clientX}px`;
+                    particle.style.top = `${e.clientY}px`;
+
+                    const size = Math.random() * 8 + 4;
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+
+                    const destinationX = (Math.random() - 0.5) * 80; 
+                    const destinationY = (Math.random() - 0.5) * 80 - 20;
+
+                    particle.style.setProperty('--dx', `${destinationX}px`);
+                    particle.style.setProperty('--dy', `${destinationY}px`);
+
+                    const duration = Math.random() * 0.4 + 0.4;
+                    particle.style.animationDuration = `${duration}s`;
+
+                    document.body.appendChild(particle);
+
+                    setTimeout(() => {
+                        particle.remove();
+                    }, duration * 1000);
+                }
+            };
+
+            let isThrottled = false;
+            window.addEventListener('mousemove', (e) => {
+                if (!isThrottled) {
+                    createWaterParticle(e);
+                    isThrottled = true;
+                    setTimeout(() => { isThrottled = false; }, 30);
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
