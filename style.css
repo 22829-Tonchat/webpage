@@ -1,37 +1,49 @@
-document.addEventListener('mousemove', function(e) {
-  // สร้างหยดน้ำสาดเมื่อมีการขยับเมาส์
-  createWaterSplash(e.clientX, e.clientY);
-});
+document.addEventListener('DOMContentLoaded', () => {
+    // ฟังก์ชันสร้างหยดน้ำพ่น
+    const createWaterParticle = (e) => {
+        // จำกัดจำนวนตัวเจเนอเรตไม่ให้เครื่องกระตุก
+        const particleCount = 4; 
 
-function createWaterSplash(x, y) {
-  // สุ่มจำนวนหยดน้ำสาดต่อการขยับ 1 ครั้ง (3-5 หยด)
-  const particleCount = Math.floor(Math.random() * 3) + 3;
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('water-particle');
+            
+            // ตั้งค่าตำแหน่งเริ่มต้นที่หัวลูกศรเมาส์
+            particle.style.left = `${e.clientX}px`;
+            particle.style.top = `${e.clientY}px`;
 
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.classList.add('water-drop');
-    document.body.appendChild(particle);
+            // สุ่มขนาดหยดน้ำ
+            const size = Math.random() * 8 + 4; // ขนาด 4px - 12px
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
 
-    // กำหนดตำแหน่งเริ่มต้นที่ปลายเมาส์
-    particle.style.left = `${x}px`;
-    particle.style.top = `${y}px`;
+            // สุ่มทิศทางการพ่นกระเด็น (X, Y) และระยะทาง
+            const destinationX = (Math.random() - 0.5) * 80; 
+            const destinationY = (Math.random() - 0.5) * 80 - 20; // ให้แรงพ่นเฉียงขึ้นเล็กน้อย
 
-    // สุ่มขนาดของหยดน้ำ
-    const size = Math.random() * 8 + 4; // ขนาด 4px - 12px
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
+            particle.style.setProperty('--dx', `${destinationX}px`);
+            particle.style.setProperty('--dy', `${destinationY}px`);
 
-    // สุ่มทิศทางและระยะทางที่น้ำจะสาดออกไป (X และ Y)
-    const destinationX = (Math.random() - 0.5) * 100;
-    const destinationY = (Math.random() - 0.5) * 100 + 20; // เอียงลงล่างตามแรงโน้มถ่วงเล็กน้อย
+            // สุ่มระยะเวลาเล่น Animation
+            const duration = Math.random() * 0.4 + 0.4; // 0.4s - 0.8s
+            particle.style.animationDuration = `${duration}s`;
 
-    // ส่งค่าไปยัง CSS Custom Properties
-    particle.style.setProperty('--dx', `${destinationX}px`);
-    particle.style.setProperty('--dy', `${destinationY}px`);
+            document.body.appendChild(particle);
 
-    // ลบ Element ทิ้งเมื่อเล่น Animation เสร็จเพื่อไม่ให้เว็บอืด
-    particle.addEventListener('animationend', function() {
-      particle.remove();
+            // ลบ Element ออกเมื่อทำงานเสร็จเพื่อเคลียร์ Memory
+            setTimeout(() => {
+                particle.remove();
+            }, duration * 1000);
+        }
+    };
+
+    // ดักจับการเคลื่อนไหวของเมาส์ (Throttle เพื่อความลื่นไหล)
+    let isThrottled = false;
+    window.addEventListener('mousemove', (e) => {
+        if (!isThrottled) {
+            createWaterParticle(e);
+            isThrottled = true;
+            setTimeout(() => { isThrottled = false; }, 30); // สร้างทุกๆ 30ms
+        }
     });
-  }
-}
+});
